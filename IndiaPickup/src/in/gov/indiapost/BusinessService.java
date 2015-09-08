@@ -1,7 +1,14 @@
 package in.gov.indiapost;
 
 import java.sql.Date;
+import java.util.*;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 
 public class BusinessService {
 
@@ -138,8 +145,25 @@ public class BusinessService {
 	 }
 
 	private boolean validateDate(String date) {
-		return (date
-				.matches("^(3[01]|[12][0-9]|0[1-9])/(1[0-2]|0[1-9])/[0-9]{4}$"));
+		boolean valid=true;
+		if((date.matches("^(3[01]|[12][0-9]|0[1-9])/(1[0-2]|0[1-9])/[0-9]{4}$"))){
+			
+		//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/mm/yyyy");
+		//String strcurdate = LocalDateTime.now().format(formatter);
+		LocalDate currentdate = LocalDate.now();
+		/*String curdate = currentdate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+		
+		LocalDate curDate = LocalDate.parse(curdate, DateTimeFormatter.ofPattern("dd/MM/yyyy"));*/
+		LocalDate userDt = LocalDate.parse(date,DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+		
+		if(currentdate.isAfter(userDt))
+		valid=false;
+		
+		}
+		else
+			valid=false;
+		
+		return valid;
 
 	}
 
