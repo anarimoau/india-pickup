@@ -56,7 +56,7 @@ h3 {
 			<h2>Please enter your package details.</h2>
 			<h6>Fields marked with (*) are mandatory</h6>
 			<input type="hidden" name="FORM_SUBMITTED" value="REGISTER_FORM">
-			Pickup Date (dd/mm/yyy)*: <br> <input type="text" name="date">
+			Pickup Date (dd/mm/yyyy)*: <br> <input type="text" name="date">
 			<br> PickupTime (hh:mm 24hrs)*: <br> <input type="text"
 				name="time"> <br> Approximate Weight* (grams): <br>
 			<input type="text" name="weight"><br>

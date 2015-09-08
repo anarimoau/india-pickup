@@ -66,7 +66,7 @@ h4 {
 			<%=reg.getWeight()%>
 			grams <br> <br> Thank you for using this service. <br><br>
 			For a new pick up request click <a href="view2.jsp"
-				style="color: black">here.</a><br>To register a new user chick
+				style="color: black">here.</a><br>To register a new user click
 			<a href="view1.jsp" style="color: black">here.</a>
 		</h4>
 	</div>

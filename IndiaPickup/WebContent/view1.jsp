@@ -66,8 +66,6 @@ form {
 				name="addselect" value="office">Office <br>
 			<textarea name="address" rows="10" cols="30"></textarea>
 			<br> <br> <input type="submit" value="Submit" />
-
-
 		</form>
 	</div>
 

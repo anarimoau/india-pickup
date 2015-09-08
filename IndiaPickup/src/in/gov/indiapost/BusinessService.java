@@ -9,107 +9,86 @@ public class BusinessService {
 
 	public void setPersonal(String f, String l, String e, String add,
 			String adds) {
-		
-		fname= f;
-		lname=l;
-		email=e;
-		address=add;
-		addselect= adds;
+
+		fname = f;
+		lname = l;
+		email = e;
+		address = add;
+		addselect = adds;
 
 	}
-	
-	
-	public void setPackage(String d,String t, String w){
-		
-		date=d;
-		time=t;
-		weight=w;
-	}
 
-	
+	public void setPackage(String d, String t, String w) {
+
+		date = d;
+		time = t;
+		weight = w;
+	}
 
 	public String getFname() {
 		return fname;
 	}
 
-
 	public void setFname(String fname) {
 		this.fname = fname;
 	}
-
 
 	public String getLname() {
 		return lname;
 	}
 
-
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-
 
 	public String getEmail() {
 		return email;
 	}
 
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 
 	public String getAddress() {
 		return address;
 	}
 
-
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
 
 	public String getAddselect() {
 		return addselect;
 	}
 
-
 	public void setAddselect(String addselect) {
 		this.addselect = addselect;
 	}
-
 
 	public String getDate() {
 		return date;
 	}
 
-
 	public void setDate(String date) {
 		this.date = date;
 	}
-
 
 	public String getTime() {
 		return time;
 	}
 
-
 	public void setTime(String time) {
 		this.time = time;
 	}
-
 
 	public String getWeight() {
 		return weight;
 	}
 
-
 	public void setWeight(String weight) {
 		this.weight = weight;
 	}
 
-
-
-	
 	public boolean regAuthenticate(String fname, String lname, String email,
 			String address, String addselect) {
 
@@ -124,8 +103,8 @@ public class BusinessService {
 		else if (!validateName(fname, lname))
 			return false;
 
-		// else if (validateEmail(email))
-		// return false;
+		 else if (!validateEmail(email))
+		 return false;
 		else
 			return true;
 	}
@@ -153,10 +132,10 @@ public class BusinessService {
 		return (f.matches("[a-zA-Z]*") && l.matches("[a-zA-Z]*"));
 	}
 
-	// private boolean validateEmail(String email) {
-	//
-	// return true;
-	// }
+	 private boolean validateEmail(String email) {
+	
+	 return (email.matches("^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"));
+	 }
 
 	private boolean validateDate(String date) {
 		return (date
